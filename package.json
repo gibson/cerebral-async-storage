@@ -1,0 +1,35 @@
+{
+  "name": "cerebral-async-storage",
+  "version": "1.0.0",
+  "description": "Async storage provider for Cerebral",
+  "main": "lib/index.js",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "build": "BABEL_ENV=production babel src/ --out-dir=lib/ -s",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gibson/cerebral-async-storage.git"
+  },
+  "keywords": [
+    "cerebral",
+    "react-native",
+    "async storage"
+  ],
+  "author": "Shishkin Ivan <undebuger@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gibson/cerebral-async-storage/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.55.0"
+  },
+  "peerDependencies": {
+    "react-native": "^0.48.4"
+  }
+}

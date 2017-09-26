@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "env",
+    "flow"
+  ],
+  "plugins": [
+    "transform-class-properties"
+  ],
+  "env": {
+    "production": {
+      "ignore": [
+        "**/*.test.js",
+        "**/testHelper.js"
+      ]
+    }
+  }
+}
