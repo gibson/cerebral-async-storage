@@ -55,8 +55,12 @@ export class AsyncProvider {
     return result;
   }
 
+  /**
+   * Return array of syncPaths
+   * @return {Array}
+   */
   getPaths() {
-    return this.syncPaths;
+    return Array.from(this.syncPaths);
   }
 
   static serialize(data: any) {
