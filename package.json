@@ -1,6 +1,6 @@
 {
   "name": "cerebral-async-storage",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Async storage provider for Cerebral",
   "main": "lib/index.js",
   "typings": "./index.d.ts",
