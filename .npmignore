@@ -2,3 +2,5 @@
 /src
 /test
 .idea/*
+.gitignore
+.flowconfig
