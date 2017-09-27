@@ -25,30 +25,11 @@ const controller = Controller({
 })
 ```
 ## Auto sync
-For auto sync your state you need define your module as a function, like this:
+For sync your state you need run signal:
 ```javascript
 import {restoreState} from 'cerebral-async-storage/operators';
 
-export default ({path, controller}) => {
-  controller.on('initialized', () => {
-    // run signal with the $NAME$ - anything like restoreAuthState
-    controller.runSignal('$NAME$', [restoreState], {
-       path, // path for keys like @app@
-       keys: ['status', 'profile'] // keys for sync from current module 
-     });
-  });
-
-  return {
-    state: {
-      status: true,
-      profile: {
-        name: "John Dow"
-      }
-    },
-    signals: {},
-    modules: {}
-  }
-}
+controller.runSignal('$NAME$', [restoreState]);
 ```
 
 # Base actions
