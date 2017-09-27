@@ -5,9 +5,14 @@ export class AsyncProvider {
   prefix = '';
   syncPaths: Set<string> = new Set();
 
-  constructor(options: { prefix: string }) {
+  constructor(options: { prefix: string, syncPaths: [string] }) {
     if (options && options.prefix) {
       this.prefix = options.prefix + '.';
+    }
+    if (options && options.syncPaths) {
+      syncPaths.forEach(path => {
+        this.syncPaths.add(path);
+      });
     }
   }
 
@@ -48,6 +53,10 @@ export class AsyncProvider {
     }
 
     return result;
+  }
+
+  getPaths() {
+    return this.syncPaths;
   }
 
   static serialize(data: any) {
